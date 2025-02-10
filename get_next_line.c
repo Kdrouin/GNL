@@ -89,8 +89,8 @@ char	*ft_next(char *buffer)
 		free(buffer);
 		return (NULL);
 	}
-	next = ft_calloc(ft_strlen(buffer) - i + 1, sizeof(char));
 	i++;
+	next = ft_calloc(ft_strlen(buffer) - i, sizeof(char));
 	j = 0;
 	while (buffer[i])
 	{
