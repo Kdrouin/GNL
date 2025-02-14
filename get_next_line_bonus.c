@@ -42,7 +42,7 @@ char	*read_file(int fd, char *res)
 	while (byte_read > 0)
 	{
 		byte_read = read(fd, buffer, BUFFER_SIZE);
-		if (byte_read == -1)
+		if (byte_read < 0)
 			ft_free(buffer, NULL);
 		buffer[byte_read] = 0;
 		res = ft_free(res, buffer);
@@ -104,18 +104,18 @@ char	*ft_next(char *buffer)
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer;
+	static char	*buffer[1024];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 		return (NULL);
-	buffer = read_file(fd, buffer);
-	if (!buffer)
+	buffer[fd] = read_file(fd, buffer[fd]);
+	if (!buffer[fd])
 	{
-		free(buffer);
+		free(buffer[fd]);
 		return (NULL);
 	}
-	line = ft_line(buffer);
-	buffer = ft_next(buffer);
+	line = ft_line(buffer[fd]);
+	buffer[fd] = ft_next(buffer[fd]);
 	return (line);
 }

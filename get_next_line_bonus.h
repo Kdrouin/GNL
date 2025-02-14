@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kadrouin <kadrouin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/23 10:45:59 by kadrouin          #+#    #+#             */
-/*   Updated: 2025/01/23 10:45:59 by kadrouin         ###   ########.fr       */
+/*   Created: 2025/02/14 11:50:02 by kadrouin          #+#    #+#             */
+/*   Updated: 2025/02/14 11:50:02 by kadrouin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 # include <unistd.h>
 # include <stdlib.h>
 
