@@ -24,7 +24,7 @@
 
 char	*read_file(int fd, char *res);
 char	*get_next_line(int fd);
-char	*ft_free(char *buffer, char *ptr);
+char	*ft_free(char *buffer, char *ptr, int c);
 char	*ft_strchr(const char *string, int c);
 char	*ft_strjoin(const char *s1, const char *s2);
 void	*ft_calloc(size_t elementCount, size_t elementSize);

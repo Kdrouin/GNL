@@ -53,27 +53,28 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 char	*ft_strchr(const char *string, int c )
 {
-	char	*temp;
+	unsigned char	temp;
 
-	temp = (char *)string;
-	while (*temp != c && *temp != 0)
-		temp++;
-	if (*temp == c)
-		return (temp);
-	else
-		return (NULL);
+	temp = (unsigned char)c;
+	while (*string)
+	{
+		if (*string == (char)temp)
+			return ((char *)string);
+		string++;
+	}
+	if (temp == '\0')
+		return ((char *)string);
+	return (NULL);
 }
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*str;
 	size_t	i;
 
-	str = (char *)s;
 	i = 0;
 	while (i < n)
 	{
-		str[i] = '\0';
+		*(unsigned char *)(s + i) = '\0';
 		i++;
 	}
 }
